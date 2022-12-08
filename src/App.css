@@ -1,38 +1,392 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+}
+
+/* body {
+  font-weight: 400;
+  overflow-x: hidden;
+  position: relative;
+  background-color: #121212 !important;
+  color: #fff !important;
+  font-family: 'Centra', sans-serif !important;
+} */
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
+p, a, li, button, ul {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+}
+
+@media (min-width:1700px) {
+	main .container {
+		max-width: 100%;
+		padding: 0 150px;
+	}
+}
+
+/* p.success {
+	color: green;
+}
+
+p.danger {
+	color: red;
+} */
+
+
+
+
+.pad-lr{
+  padding: 0 3rem;
+}
+
+
+
+
+
+/************ Navbar Css ************/
+
+.navigation{
+  height: 5rem;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  background-color: black;
+  /* background-color: #05386B; */
+  color: white;
+  z-index: 9999;
+}
+.heading-size{
+  font-size: 2.6rem;
+  font-weight: 500;
+}
+.lio-color{
+  color:#FF652F;
+}
+.link-text{
+  color: white;
+  text-decoration: none;
+}
+.heading-size:hover{
+  color: #FF652F;
+}
+.navigation-menu{
+  margin-left: auto;
+}
+.navigation-menu ul{
+  width: 40vw;
+  display: flex;
+  padding: 0;
+  justify-content: space-evenly;
+}
+.navigation-menu li{
+  font-weight: bold;
+  list-style-type: none;
+  margin: 0.1rem;
+
+}
+.link-text-nav{
+  color: white;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+.link-text-nav:hover,
+.link-text-nav.active{
+  color: #D9B08C;
+  /* color: #FF652F; */
+}
+
+/* Home section CSS */
+#home{
+  margin-top: 5rem;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  /* background-color: #EDF5E1; */
+  /* background: linear-gradient(to right #FD2D00 #DF007C); */
+  /* -webkit-text-fill-color:transparent; */
+  /* -webkit-background-clip: text; */
+  background-color:black;
+
+
+}
+#home .name{
+  display: block;
+  line-height: 5rem;
+  height: 6rem;
+  font-size: 5rem;
+  font-weight: 500;
+  background: linear-gradient(180deg, #FD2D00, #DF007C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+}
+#home .front-img{
+  height: 25rem;
+  width: 25rem;
+  border-radius: 2rem;
+  background-image: url(../public/image/fernando-hernandez-JdoofvUDUwc-unsplash.jpg);
+  background-size: cover;
+}
+.m-l{
+  margin-left: 5px;
+}
+.webdev{
+  display: inline-block;
+  /* border: 1px solid red; */
+  width: 12rem;
+  height: 30px;
+}
+.webdev ul{
+  padding: 0 10px;
+  margin: 0;
+  height: 30px;
+  width: 13rem;
+  /* background-color: white; */
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+}
+.webdev li{
+  list-style: none;
+  /* display: flex; */
+  color: #48abe0;
+  text-shadow: #48abe0 3px 3px 10px;
+  animation: rainbow 1s linear infinite;
+}
+@keyframes rainbow {
+  /* 0%{ text-shadow: #48abe0 0px 0px 30px; }
+  50% { text-shadow: blueviolet 0px 0px 30px; }
+  75% { text-shadow: rebeccapurple 0px 0px 30px;}
+  100% { text-shadow: #48abe0 0px 0px 30px; } */
+  0%{
+    filter: hue-rotate(0deg);
+  }
+  100%{
+    filter: hue-rotate(360deg);
+  }
+ }
+
+/* About section CSS */
+
+#about{
+  height: 100vh;
+  background-color: #EDC7B7;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+#about .aboutme{
+  font-weight: 600;
+  font-size: 2.5rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#about .cont{
+  display: flex;
+  justify-content: space-evenly;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#about .about-img{
+  width: 22rem;
+  height: 27rem;
+  background-image: url(../public/image/ali-morshedlou-WMD64tMfc4k-unsplash.jpg);
+  background-size: cover;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#about .about-text{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-evenly;
+}
+#about .about-text p{
+  margin: 0;
+  width: 30rem;
+  line-height: 30px;
+}
+#about button{
+  cursor: pointer;
+  width: 10rem;
+  height: 3rem;
   color: white;
+  font-weight: bold;
+  border-radius: 2rem;
+  /* background-color: #36454f; */
+  background-color: black;
 }
 
-.App-link {
-  color: #61dafb;
+/* project section CSS */
+
+#project{
+  height: 115vh;
+  background-color: #EDC7B7;
+  display: flex;
+  /* border: 1px solid blue; */
+  /* border: 1px solid black; */
+  flex-direction: column;
+  /* justify-content: space-evenly; */
+}
+.heading{
+  margin: 2rem 0 ;
+  font-weight: 600;
+  font-size: 2.5rem;
+  text-align: center;
+}
+#project .grid-cont{
+  height: 33rem;
+  padding: 10px 0;
+  border-radius: 50px;
+  /* border: 1px solid black; */
+  background-color: #caa899;
+  display: grid;
+  grid-template-columns: auto auto ;
+  gap: 30px;
+  justify-content: space-around;
+}
+.grid-cont .item{
+  width: 25rem;
+  height: 15rem;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+.grid-cont .item:hover{
+  transition: all 0.1s linear;
+  transform: scale(1.1);
+  box-shadow: 0px 0px 20px 10px black;
+
+}
+.grid-cont a:nth-child(1) .item{
+  background-image: url(../public/image/BlogApp\ \(2\).png);
+  background-size: cover;
+  /* background-repeat: no-repeat;/ */
+}
+.grid-cont  a:nth-child(2) .item{
+  background-image: url(../public/image/studentdetails\ \(2\).png);
+  background-size: cover;
+}
+.grid-cont a:nth-child(3) .item{
+  background-image: url(../public/image/DigitalClock\ \(2\).png);
+  background-size: cover;
+}
+.grid-cont a:nth-child(4) .item{
+  background-image: url(../public/image/Todoapp.png);
+  background-size: cover;
 }
 
-@keyframes App-logo-spin {
-  from {
+/* Skills section CSS */
+
+#skills{
+  height: 100vh;
+  color: white;
+  text-align: center;
+  /* color: navy; */
+  border: 1px solid black;
+  background-color: black;
+}
+#skills .cont{
+  display: grid;
+  gap: 5rem;
+  grid-template-columns: auto auto auto ;
+  justify-content: space-evenly;
+}
+
+#skills .cont div{
+  height: 5rem;
+  /* color: black; */
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.react-icon{
+  font-size: 100px;   
+   color: #3FEEE6;
+}
+.animate{
+  animation: rotates 4s infinite linear;
+
+}
+@keyframes rotates{
+  0%{
     transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  100%{
+    transform: rotate(180deg);
   }
+}
+
+/* contact section */
+
+/* style={{background: 'teal', height: '20rem' }} */
+
+#contact{
+  height: 100vh;
+  background-color: teal;
+}
+
+label{
+  color: black;
+  margin-bottom: 0.5rem;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  margin: auto;
+  max-width: 600px;
+}
+form input,form textarea{
+  margin-bottom: 1rem;
+  padding: 10px 18px;
+  font-size: 1.2rem;
+  /* color: #f4f4f4; */
+}
+form textarea:focus, form input:focus{
+  border: 2px solid black;
+}
+
+.send-btn{
+  font-weight: bold;
+  color: #48abe0;
+}
+.send-btn:hover{
+  border: 0;
+  background-color: #48abe0;
+  color: white;
 }
